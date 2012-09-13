@@ -1,6 +1,7 @@
 /*
-A wrapper for libtextcat
+A wrapper for libtextcat.
 
+See: http://software.wise-guys.nl/libtextcat/
 */
 package textcat
 
@@ -29,7 +30,7 @@ import (
 )
 
 type Textcat struct {
-    h      unsafe.Pointer
+	h      unsafe.Pointer
 	isOpen bool
 }
 
@@ -47,7 +48,7 @@ func NewTextcat(configfile string) (t *Textcat, e error) {
 }
 
 func (t *Textcat) Classify(s string) string {
-	if ! t.isOpen {
+	if !t.isOpen {
 		panic("Textcat is closed")
 	}
 	cs := C.CString(s)
@@ -61,4 +62,3 @@ func (t *Textcat) Close() {
 		t.isOpen = false
 	}
 }
-
