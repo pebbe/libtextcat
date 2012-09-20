@@ -3,7 +3,7 @@ A wrapper for libtextcat.
 
 See: http://software.wise-guys.nl/libtextcat/
 */
-package textcat
+package libtextcat
 
 /*
 #cgo LDFLAGS: -ltextcat
@@ -40,7 +40,7 @@ func NewTextcat(configfile string) (t *Textcat, e error) {
 	t.h = C.tc_init(cs)
 	C.free(unsafe.Pointer(cs))
 	if uintptr(t.h) == 0 {
-		e = errors.New("Init textcat failed for config file \"" + configfile + "\"")
+		e = errors.New("Init libtextcat failed for config file \"" + configfile + "\"")
 	} else {
 		t.isOpen = true
 	}
