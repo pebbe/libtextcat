@@ -26,6 +26,7 @@ import "C"
 
 import (
 	"errors"
+	"runtime"
 	"unsafe"
 )
 
@@ -44,6 +45,7 @@ func NewTextcat(configfile string) (t *Textcat, e error) {
 	} else {
 		t.isOpen = true
 	}
+	runtime.SetFinalizer(t, (*Textcat).Close)
 	return
 }
 
