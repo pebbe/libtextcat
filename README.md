@@ -12,5 +12,5 @@ A Go wrapper for [libtextcat](http://software.wise-guys.nl/libtextcat/)
 
 ## Docs
 
- * [package help](http://gopkgdoc.appspot.com/pkg/github.com/pebbe/libtextcat)
+ * [package help](http://godoc.org/github.com/pebbe/libtextcat)
 
