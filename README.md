@@ -1,5 +1,7 @@
 A Go wrapper for [libtextcat](http://software.wise-guys.nl/libtextcat/)
 
+Keywords: text categorization, language detector
+
 ## Install
 
     export CPATH=/path/to/textcat.h
