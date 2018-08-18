@@ -6,8 +6,8 @@ See: http://software.wise-guys.nl/libtextcat/
 package libtextcat
 
 /*
-#cgo LDFLAGS: -ltextcat
-#include <textcat.h>
+#cgo LDFLAGS: -lexttextcat
+#include <libexttextcat/textcat.h>
 #include <stdlib.h>
 #include <string.h>
 void *tc_init(const char *configfile) {
